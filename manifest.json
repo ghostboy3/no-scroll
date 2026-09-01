@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "NoScroll",
+  "version": "1.0.0",
+  "description": "Hides Instagram Reels posted by accounts you don't follow.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "NoScroll",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
