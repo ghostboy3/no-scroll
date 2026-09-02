@@ -9,8 +9,8 @@ async function getCurrentState() {
 
 function updateUI(isEnabled) {
   statusText.textContent = isEnabled
-    ? "Filtering reels from accounts you don't follow."
-    : 'Filter is off — all reels are shown.';
+    ? "Blocking posts and reels from accounts you don't follow."
+    : 'Filter is off — all posts and reels are shown.';
   toggleButton.textContent = isEnabled ? 'Turn filter off' : 'Turn filter on';
 }
 
